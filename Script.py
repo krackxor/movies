@@ -2,367 +2,358 @@ import os
 class script(object):
     START_TXT = """<b>ʜᴇʏ {}, {}\n\nɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ʙᴏᴛ. ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪ ᴡɪʟʟ ɢɪᴠᴇ ᴍᴏᴠɪᴇs ᴏʀ sᴇʀɪᴇs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴘᴍ !! 😍\n<blockquote>🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/JISSHU_BOTS">Jɪssʜᴜ Bᴏᴛs</a></blockquote></b>"""
     
-    HELP_TXT = """<b>ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..\n\n<blockquote>🌿 <a href="https://youtu.be/mWCsVUOKuoI?si=7qVkoBfDxMCXt-ms">👉🏻 Create Your Own Bot</a></blockquote></b>"""
+    HELP_TXT = """<b>Klik tombol di bawah ini untuk mendapatkan dokumentasi tentang modul tertentu..\n\n<blockquote>🌿 <a href="https://youtu.be/mWCsVUOKuoI?si=7qVkoBfDxMCXt-ms">👉🏻 Buat Bot Anda Sendiri</a></blockquote></b>"""
     
-    TELE_TXT = """<b>/telegraph - sᴇɴᴅ ᴍᴇ ᴘɪᴄᴛᴜʀᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴜɴᴅᴇʀ (5ᴍʙ)
+    TELE_TXT = """<b>/telegraph - kirim saya gambar atau video di bawah (5MB)
 
-ɴᴏᴛᴇ - ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋ ɪɴ ʙᴏᴛʜ ɢʀᴏᴜᴘs ᴀɴᴅ ʙᴏᴛ ᴘᴍ</b>"""
-    FSUB_TXT = """<b>• ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ 😗
-• ᴍᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ᴄʜᴀɴɴᴇʟ ᴏʀ Gʀᴏᴜᴘ  😉
-• sᴇɴᴅ /fsub ʏᴏᴜʀ_ᴛᴀʀɢᴇᴛ_ᴄʜᴀᴛ_ɪᴅ
-ᴇx: <code>/fsub -100xxxxxx</code>
+Catatan - Perintah ini berfungsi di grup dan PM bot</b>"""
+    
+    FSUB_TXT = """<b>• Tambahkan saya ke grup Anda dan jadikan saya admin 😗
+• Jadikan saya admin di saluran atau grup target force subscribe Anda 😉
+• Kirim /fsub id_chat_target_anda
+Contoh: <code>/fsub -100xxxxxx</code>
 
-ɴᴏᴡ ɪᴛ's ᴅᴏɴᴇ.ɪ ᴡɪʟʟ ᴄᴏᴍᴘᴇʟ ʏᴏᴜʀ ᴜsᴇʀs ᴛᴏ ᴊᴏɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ/ɢʀᴏᴜᴘ, ᴀɴᴅ I ᴡɪʟʟ ɴᴏᴛ ᴘʀᴏᴠɪᴅᴇ ᴀɴʏ ғɪʟᴇs ᴜɴᴛɪʟ ʏᴏᴜʀ ᴜsᴇʀs ᴊᴏɪɴ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ᴄʜᴀɴɴᴇʟ.
+Sekarang sudah selesai. Saya akan memaksa pengguna Anda untuk bergabung dengan saluran/grup Anda, dan saya tidak akan menyediakan file apa pun sampai pengguna Anda bergabung dengan saluran target Anda.
 
-ᴛᴏ ᴅɪsᴀʙʟᴇ ғsᴜʙ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ, sɪᴍᴘʟʏ sᴇɴᴅ <code>/del_fsub</code>
+Untuk menonaktifkan fsub di grup Anda, cukup kirim <code>/del_fsub</code>
 
-ᴛᴏ ᴄʜᴇᴄᴋ ɪғ ғsᴜʙ ɪs ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴏʀ ɴᴏᴛ, ᴜsᴇ <code>/show_fsub</code></b>"""
+Untuk memeriksa apakah fsub terhubung atau tidak, gunakan <code>/show_fsub</code></b>"""
 
-    FORCESUB_TEXT="""<b>
-ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ᴍᴏᴠɪᴇ ʀᴇᴏ̨ᴜᴇsᴛᴇᴅ ʙʏ ʏᴏᴜ.
+    FORCESUB_TEXT = """<b>Untuk mendapatkan film yang diminta oleh Anda.
 
-ʏᴏᴜ ᴡɪʟʟ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ.
+Anda harus bergabung dengan saluran resmi kami.
 
-ғɪʀsᴛ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ "Jᴏɪɴ ᴜᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ" ʙᴜᴛᴛᴏɴ, ᴛʜᴇɴ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ "ʀᴇᴏ̨ᴜᴇsᴛ ᴛᴏ Jᴏɪɴ" ʙᴜᴛᴛᴏɴ.
+Pertama, klik tombol "Gabung Saluran Pembaruan", lalu, klik tombol "Minta Bergabung".
 
-ᴀғᴛᴇʀ ᴛʜᴀᴛ, ᴛʀʏ ᴀᴄᴄᴇssɪɴɢ ᴛʜᴀᴛ ᴍᴏᴠɪᴇ ᴛʜᴇɴ, ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ "ᴛʀʏ ᴀɢᴀɪɴ" ʙᴜᴛᴛᴏɴ.
+Setelah itu, coba akses film tersebut lalu klik tombol "Coba Lagi".
     </b>"""
     
-    TTS_TXT="""
-<b>• sᴇɴᴅ /tts ᴛᴏ ᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ</b>"""
+    TTS_TXT = """<b>Kirim /tts untuk menggunakan fitur ini</b>"""
 
-    DISCLAIMER_TXT = """
-<b>ᴛʜɪꜱ ɪꜱ ᴀɴ ᴏᴘᴇɴ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ.
+    DISCLAIMER_TXT = """<b>Ini adalah proyek sumber terbuka.
 
-ᴀʟʟ ᴛʜᴇ ꜰɪʟᴇꜱ ɪɴ ᴛʜɪꜱ ʙᴏᴛ ᴀʀᴇ ꜰʀᴇᴇʟʏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛʜᴇ ɪɴᴛᴇʀɴᴇᴛ ᴏʀ ᴘᴏꜱᴛᴇᴅ ʙʏ ꜱᴏᴍᴇʙᴏᴅʏ ᴇʟꜱᴇ. ᴊᴜꜱᴛ ꜰᴏʀ ᴇᴀꜱʏ ꜱᴇᴀʀᴄʜɪɴɢ ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ɪɴᴅᴇxɪɴɢ ꜰɪʟᴇꜱ ᴡʜɪᴄʜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴜᴘʟᴏᴀᴅᴇᴅ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ. ᴡᴇ ʀᴇꜱᴘᴇᴄᴛ ᴀʟʟ ᴛʜᴇ ᴄᴏᴘʏʀɪɢʜᴛ ʟᴀᴡꜱ ᴀɴᴅ ᴡᴏʀᴋꜱ ɪɴ ᴄᴏᴍᴘʟɪᴀɴᴄᴇ ᴡɪᴛʜ ᴅᴍᴄᴀ ᴀɴᴅ ᴇᴜᴄᴅ. ɪꜰ ᴀɴʏᴛʜɪɴɢ ɪꜱ ᴀɢᴀɪɴꜱᴛ ʟᴀᴡ ᴘʟᴇᴀꜱᴇ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ꜱᴏ ᴛʜᴀᴛ ɪᴛ ᴄᴀɴ ʙᴇ ʀᴇᴍᴏᴠᴇᴅ ᴀꜱᴀᴘ. ɪᴛ ɪꜱ ꜰᴏʀʙɪʙʙᴇɴ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ, ꜱᴛʀᴇᴀᴍ, ʀᴇᴘʀᴏᴅᴜᴄᴇ, ꜱʜᴀʀᴇ ᴏʀ ᴄᴏɴꜱᴜᴍᴇ ᴄᴏɴᴛᴇɴᴛ ᴡɪᴛʜᴏᴜᴛ ᴇxᴘʟɪᴄɪᴛ ᴘᴇʀᴍɪꜱꜱɪᴏɴ ꜰʀᴏᴍ ᴛʜᴇ ᴄᴏɴᴛᴇɴᴛ ᴄʀᴇᴀᴛᴏʀ ᴏʀ ʟᴇɢᴀʟ ᴄᴏᴘʏʀɪɢʜᴛ ʜᴏʟᴅᴇʀ. ɪꜰ ʏᴏᴜ ʙᴇʟɪᴇᴠᴇ ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴠɪᴏʟᴀᴛɪɴɢ ʏᴏᴜʀ ɪɴᴛᴇʟʟᴇᴄᴛᴜᴀʟ ᴘʀᴏᴘᴇʀᴛʏ, ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ʀᴇꜱᴘᴇᴄᴛɪᴠᴇ ᴄʜᴀɴɴᴇʟꜱ ꜰᴏʀ ʀᴇᴍᴏᴠᴀʟ. ᴛʜᴇ ʙᴏᴛ ᴅᴏᴇꜱ ɴᴏᴛ ᴏᴡɴ ᴀɴʏ ᴏꜰ ᴛʜᴇꜱᴇ ᴄᴏɴᴛᴇɴᴛꜱ, ɪᴛ ᴏɴʟʏ ɪɴᴅᴇx ᴛʜᴇ ꜰɪʟᴇꜱ ꜰʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ. 
+Semua file dalam bot ini tersedia secara bebas di internet atau diposting oleh orang lain. Untuk pencarian yang mudah, bot ini mengindeks file yang sudah diunggah di Telegram. Kami menghormati semua undang-undang hak cipta dan bekerja sesuai dengan DMCA dan EUCD. Jika ada yang melanggar hukum, silakan hubungi saya agar dapat segera dihapus. Dilarang mengunduh, streaming, mereproduksi, berbagi, atau mengonsumsi konten tanpa izin eksplisit dari pembuat konten atau pemegang hak cipta yang sah. Jika Anda yakin bot ini melanggar hak kekayaan intelektual Anda, hubungi saluran terkait untuk penghapusan. Bot ini tidak memiliki konten ini, hanya mengindeks file dari Telegram.
 
-<blockquote>🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/learningbots79'>Yash</a></b></blockquote>"""
+<blockquote>🌿 Dipelihara oleh: <a href='https://t.me/learningbots79'>Yash</a></b></blockquote>"""
     
 
-    ABOUT_TEXT = """<blockquote><b>‣ ᴍʏ ɴᴀᴍᴇ : Learning Bots\n‣ ᴄʀᴇᴀᴛᴏʀ : <a href='https://t.me/learningbots79'>MR.Innocent Babe Dead</a>\n‣ ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ\n‣ ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ\n‣ ᴅᴀᴛᴀ ʙᴀsᴇ : ᴍᴏɴɢᴏ ᴅʙ\n‣ ʜᴏsᴛᴇᴅ ᴏɴ  : ᴀʟʟ ᴡᴇʙ\n‣ ʙᴜɪʟᴅ sᴛᴀᴛᴜs : ᴠ5.2 [sᴛᴀʙʟᴇ]</b></blockquote>"""    
+    ABOUT_TEXT = """<blockquote><b>‣ Nama saya: Learning Bots\n‣ Pembuat: <a href='https://t.me/learningbots79'>MR.Innocent Babe Dead</a>\n‣ Perpustakaan: pyrogram\n‣ Bahasa: Python\n‣ Basis Data: Mongo DB\n‣ Dihosting di: semua web\n‣ Status build: v5.2 [stabil]</b></blockquote>"""    
     
-    SUPPORT_GRP_MOVIE_TEXT = '''<b>ʜᴇʏ {}
+    SUPPORT_GRP_MOVIE_TEXT = '''<b>Hai {}
 
-ɪ ғᴏᴜɴᴅ {} ʀᴇsᴜʟᴛs 🎁,
-ʙᴜᴛ ɪ ᴄᴀɴ'ᴛ sᴇɴᴅ ʜᴇʀᴇ 🤞🏻
-ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴏᴜʀ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ ᴛᴏ ɢᴇᴛ ✨</b>'''
+Saya menemukan {} hasil 🎁,
+tapi tidak bisa mengirim di sini 🤞🏻
+Silakan bergabung dengan grup permintaan kami untuk mendapatkannya ✨</b>'''
 
-    CHANNELS = """
-<u>ᴏᴜʀ ᴀʟʟ ɢʀᴏᴜᴘꜱ ᴀɴᴅ ᴄʜᴀɴɴᴇʟꜱ</u> 
+    CHANNELS = """<u>Semua grup dan saluran kami</u> 
 
-▫ ᴀʟʟ ʟᴀᴛᴇꜱᴛ ᴀɴᴅ ᴏʟᴅ ᴍᴏᴠɪᴇꜱ & ꜱᴇʀɪᴇꜱ.
-▫ ᴀʟʟ ʟᴀɴɢᴜᴀɢᴇꜱ ᴍᴏᴠɪᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ.
-▫ ᴀʟᴡᴀʏꜱ ᴀᴅᴍɪɴ ꜱᴜᴘᴘᴏʀᴛ.
-▫ 𝟸𝟺x𝟽 ꜱᴇʀᴠɪᴄᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ."""
+▫ Semua film & serial terbaru dan lama.
+▫ Semua bahasa tersedia.
+▫ Dukungan admin selalu ada.
+▫ Layanan tersedia 24x7."""
 
-    LOGO = """
-
-BOT WORKING PROPERLY 🔥"""
+    LOGO = """BOT BERFUNGSI DENGAN BAIK 🔥"""
     
-    RESTART_TXT = """
-<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
+    RESTART_TXT = """<b>Bot Direset Ulang!
 
-📅 Dᴀᴛᴇ : <code>{}</code>
-⏰ Tɪᴍᴇ : <code>{}</code>
-🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code>
-🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v4.2 [ Sᴛᴀʙʟᴇ ]</code>
+📅 Tanggal: <code>{}</code>
+⏰ Waktu: <code>{}</code>
+🌐 Zona Waktu: <code>Asia/Kolkata</code>
+🛠️ Status Build: <code>v4.2 [Stabil]</code>
 
-Bʏ @JISSHU_BOTS</b>"""
+Oleh @JISSHU_BOTS</b>"""
         
     
-    STATUS_TXT = """<b><u>🗃 ᴅᴀᴛᴀʙᴀsᴇ 1 🗃</u>
+    STATUS_TXT = """<b><u>🗃 Basis Data 1 🗃</u>
 
-» ᴛᴏᴛᴀʟ ᴜsᴇʀs - <code>{}</code>
-» ᴛᴏᴛᴀʟ ɢʀᴏᴜᴘs - <code>{}</code>
-» ᴜsᴇᴅ sᴛᴏʀᴀɢᴇ - <code>{} / {}</code>
+» Total pengguna - <code>{}</code>
+» Total grup - <code>{}</code>
+» Penyimpanan yang digunakan - <code>{} / {}</code>
 
-<u>🗳 ᴅᴀᴛᴀʙᴀsᴇ 2 🗳</u></b>
+<u>🗳 Basis Data 2 🗳</u></b>
 
-» ᴛᴏᴛᴀʟ ꜰɪʟᴇs - <code>{}</code>
-» ᴜsᴇᴅ sᴛᴏʀᴀɢᴇ - <code>{} / {}</code>
+» Total file - <code>{}</code>
+» Penyimpanan yang digunakan - <code>{} / {}</code>
 
-<u>🤖 ʙᴏᴛ ᴅᴇᴛᴀɪʟs 🤖</u>
+<u>🤖 Detail Bot 🤖</u>
 
-» ᴜᴘᴛɪᴍᴇ - <code>{}</code>
-» ʀᴀᴍ - <code>{}%</code>
-» ᴄᴘᴜ - <code>{}%</code></b>"""
+» Waktu aktif - <code>{}</code>
+» RAM - <code>{}%</code>
+» CPU - <code>{}%</code></b>"""
 
-    NEW_USER_TXT = """<b>#New_User {}
+    NEW_USER_TXT = """<b>#Pengguna_Baru {}
 
-≈ ɪᴅ:- <code>{}</code>
-≈ ɴᴀᴍᴇ:- {}</b>"""
+≈ ID:- <code>{}</code>
+≈ Nama:- {}</b>"""
 
-    NEW_GROUP_TXT = """#New_Group {}
+    NEW_GROUP_TXT = """#Grup_Baru {}
 
-Group name - {}
-Id - <code>{}</code>
-Group username - @{}
-Group link - {}
-Total members - <code>{}</code>
-User - {}"""
+Nama grup - {}
+ID - <code>{}</code>
+Nama pengguna grup - @{}
+Tautan grup - {}
+Total anggota - <code>{}</code>
+Pengguna - {}"""
 
-    REQUEST_TXT = """<b>📜 ᴜꜱᴇʀ - {}
-📇 ɪᴅ - <code>{}</code>
+    REQUEST_TXT = """<b>📜 Pengguna - {}
+📇 ID - <code>{}</code>
 
-🎁 ʀᴇǫᴜᴇꜱᴛ ᴍꜱɢ - <code>{}</code></b>"""  
+🎁 Permintaan pesan - <code>{}</code></b>"""  
    
-    IMDB_TEMPLATE_TXT = """
-<b>ʜᴇʏ {message.from_user.mention}, ʜᴇʀᴇ ɪꜱ ᴛʜᴇ ʀᴇꜱᴜʟᴛꜱ ꜰᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ {search}.
+    IMDB_TEMPLATE_TXT = """<b>Hai {message.from_user.mention}, berikut adalah hasil untuk permintaan Anda {search}.
 
-🍿 Title: {title}
-🎃 Genres: {genres}
-📆 Year: {release_date}
-⭐ Rating: {rating} / 10</b>
+🍿 Judul: {title}
+🎃 Genre: {genres}
+📆 Tahun: {release_date}
+⭐ Peringkat: {rating} / 10</b>
 """
 
-    FILE_CAPTION = """<b>{file_name}\n\n𝖩𝗈𝗂𝗇➥ 「<a href="https://t.me/Jisshu_Originals">𝙅𝙞𝙨𝙨𝙝𝙪 𝙊𝙧𝙞𝙜𝙞𝙣𝙖𝙡𝙨</a>」</b>"""
+    FILE_CAPTION = """<b>{file_name}\n\nBergabung ➥ 「<a href="https://t.me/Jisshu_Originals">Jisshu Originals</a>」</b>"""
     
 
-    ALRT_TXT = """ᴊᴀʟᴅɪ ʏᴇʜᴀ sᴇ ʜᴀᴛᴏ !"""
+    ALRT_TXT = """Segera keluar dari sini!"""
 
-    OLD_ALRT_TXT = """ʏᴏᴜ ᴀʀᴇ ᴜsɪɴɢ ᴍʏ ᴏʟᴅ ᴍᴇssᴀɢᴇs..sᴇɴᴅ ᴀ ɴᴇᴡ ʀᴇǫᴜᴇsᴛ.."""
+    OLD_ALRT_TXT = """Anda menggunakan pesan lama saya.. kirim permintaan baru.."""
 
-    NO_RESULT_TXT = """<b>ᴛʜɪs ᴍᴇssᴀɢᴇ ɪs ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ 🙄</b>"""
+    NO_RESULT_TXT = """<b>Pesan ini belum dirilis atau ditambahkan dalam basis data saya 🙄</b>"""
     
-    I_CUDNT = """🤧 𝗛𝗲𝗹𝗹𝗼 {}
+    I_CUDNT = """🤧 Halo {}
 
-𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆 𝗺𝗼𝘃𝗶𝗲 𝗼𝗿 𝘀𝗲𝗿𝗶𝗲𝘀 𝗶𝗻 𝘁𝗵𝗮𝘁 𝗻𝗮𝗺𝗲.. 😐"""
+Saya tidak menemukan film atau serial dengan nama itu.. 😐"""
 
-    I_CUD_NT = """😑 𝗛𝗲𝗹𝗹𝗼 {}
+    I_CUD_NT = """😑 Halo {}
 
-𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗿𝗲𝗹𝗮𝘁𝗲𝗱 𝘁𝗼 𝘁𝗵𝗮𝘁 😞... 𝗰𝗵𝗲𝗰𝗸 𝘆𝗼𝘂𝗿 𝘀𝗽𝗲𝗹𝗹𝗶𝗻𝗴."""
+Saya tidak menemukan apa pun terkait itu 😞... periksa ejaan Anda."""
     
-    CUDNT_FND = """🤧 𝗛𝗲𝗹𝗹𝗼 {}
+    CUDNT_FND = """🤧 Halo {}
 
-𝗜 𝗰𝗼𝘂𝗹𝗱𝗻'𝘁 𝗳𝗶𝗻𝗱 𝗮𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗿𝗲𝗹𝗮𝘁𝗲𝗱 𝘁𝗼 𝘁𝗵𝗮𝘁 𝗱𝗶𝗱 𝘆𝗼𝘂 𝗺𝗲𝗮𝗻 𝗮𝗻𝘆 𝗼𝗻𝗲 𝗼𝗳 𝘁𝗵𝗲𝘀𝗲 ?? 👇"""
+Saya tidak menemukan apa pun terkait itu, apakah Anda maksud salah satu dari ini ?? 👇"""
     
-    FONT_TXT= """<b>ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴍᴏᴅᴇ ᴛᴏ ᴄʜᴀɴɢᴇ ʏᴏᴜʀ ꜰᴏɴᴛs sᴛʏʟᴇ, ᴊᴜsᴛ sᴇɴᴅ ᴍᴇ ʟɪᴋᴇ ᴛʜɪs ꜰᴏʀᴍᴀᴛ
+    FONT_TXT = """<b>Anda dapat menggunakan mode ini untuk mengubah gaya font Anda, cukup kirim saya dalam format ini
 
-<code>/font hi how are you</code></b>"""
+<code>/font hai bagaimana kabarmu</code></b>"""
     
-    PLAN_TEXT = """<b>ᴡᴇ ᴀʀᴇ ᴘʀᴏᴠɪᴅɪɴɢ ᴘʀᴇᴍɪᴜᴍ ᴀᴛ ᴛʜᴇ ʟᴏᴡᴇsᴛ ᴘʀɪᴄᴇs:
+    PLAN_TEXT = """<b>Kami menyediakan premium dengan harga terendah:
     
-1 ʀᴜᴘᴇᴇ ᴘᴇʀ ᴅᴀʏ 👻
-29 ʀᴜᴘᴇᴇs ғᴏʀ ᴏɴᴇ ᴍᴏɴᴛʜ 😚
-55 ʀᴜᴘᴇᴇs ғᴏʀ ᴛᴡᴏ ᴍᴏɴᴛʜs 😗
+1 rupiah per hari 👻
+29 rupiah untuk satu bulan 😚
+55 rupiah untuk dua bulan 😗
 
-ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ ʙᴜʏɪɴɢ ↡↡↡
+Klik tombol di bawah ini untuk melanjutkan pembelian ↡↡↡
 </b>"""
     
-    VERIFICATION_TEXT = """<b>👋 ʜᴇʏ {} {},
+    VERIFICATION_TEXT = """<b>👋 Hai {} {},
 
-📌 <u>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ ᴛᴏᴅᴀʏ, ᴘʟᴇᴀꜱᴇ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ</u>
+📌 <u>Anda belum terverifikasi hari ini, silakan klik verifikasi & dapatkan akses tak terbatas hingga verifikasi berikutnya</u>
 
-#ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ:- 1/3 ✓
+#verifikasi:- 1/3 ✓
 
-ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ ᴡɪᴛʜᴏᴜᴛ ᴀɴʏ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴꜱ ᴛʜᴇɴ ʙᴜʏ ʙᴏᴛ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ 😊
+Jika Anda ingin langsung mendapatkan file tanpa verifikasi, maka beli langganan bot 😊
 
-💶 sᴇɴᴅ /plan ᴛᴏ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ</b>"""
+💶 Kirim /plan untuk membeli langganan</b>"""
 
-    VERIFY_COMPLETE_TEXT = """<b>👋 ʜᴇʏ {},
+    VERIFY_COMPLETE_TEXT = """<b>👋 Hai {},
 
-ʏᴏᴜ ʜᴀᴠᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ 1st ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ✓
+Anda telah menyelesaikan verifikasi pertama ✓
 
-ɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ꜰᴏʀ ɴᴇxᴛ <code>{}</code></b>"""
+Sekarang Anda memiliki akses tak terbatas untuk <code>{}</code></b>"""
 
-    SECOND_VERIFICATION_TEXT = """<b>👋 ʜᴇʏ {} {},
+    SECOND_VERIFICATION_TEXT = """<b>👋 Hai {} {},
 
-📌 <u>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪꜰɪᴇᴅ, ᴛᴀᴘ ᴏɴ ᴛʜᴇ ᴠᴇʀɪꜰʏ ʟɪɴᴋ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ꜰᴏʀ ᴛɪʟʟ ɴᴇxᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ</u>
+📌 <u>Anda belum terverifikasi, tap link verifikasi dan dapatkan akses tak terbatas hingga verifikasi berikutnya</u>
 
-#ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ:- 2/3
+#verifikasi:- 2/3
 
-ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ ᴡɪᴛʜᴏᴜᴛ ᴀɴʏ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴꜱ ᴛʜᴇɴ ʙᴜʏ ʙᴏᴛ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ 😊
+Jika Anda ingin langsung mendapatkan file tanpa verifikasi, maka beli langganan bot 😊
 
-💶 sᴇɴᴅ /plan ᴛᴏ ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ</b>"""
+💶 Kirim /plan untuk membeli langganan</b>"""
 
-    SECOND_VERIFY_COMPLETE_TEXT = """<b>👋 ʜᴇʏ {},
+    SECOND_VERIFY_COMPLETE_TEXT = """<b>👋 Hai {},
 
-ʏᴏᴜ ʜᴀᴠᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ 2nd ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ✓
+Anda telah menyelesaikan verifikasi kedua ✓
 
-ɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ꜰᴏʀ ɴᴇxᴛ <code>{}</code></b>"""
+Sekarang Anda memiliki akses tak terbatas untuk <code>{}</code></b>"""
 
-    THIRDT_VERIFICATION_TEXT = """<b>👋 ʜᴇʏ {},
-    
-📌 <u>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪꜰɪᴇᴅ ᴛᴏᴅᴀʏ, ᴛᴀᴘ ᴏɴ ᴛʜᴇ ᴠᴇʀɪꜰʏ ʟɪɴᴋ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ꜰᴏʀ ɴᴇxᴛ ꜰᴜʟʟ ᴅᴀʏ.</u>
+    THIRDT_VERIFICATION_TEXT = """<b>👋 Hai {},
 
-#ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ:- 3/3
+📌 <u>Anda belum terverifikasi hari ini, tap tautan verifikasi & dapatkan akses tak terbatas untuk hari penuh berikutnya.</u>
 
-ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴛᴀᴋᴇ ᴘʀᴇᴍɪᴜᴍ sᴇʀᴠɪᴄᴇ (ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪꜰʏ)</b>"""
+#verifikasi:- 3/3
 
-    THIRDT_VERIFY_COMPLETE_TEXT= """<b>👋 ʜᴇʏ {},
-    
-ʏᴏᴜ ʜᴀᴠᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ 3rd ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ✓
+Jika Anda ingin langsung mendapatkan file, Anda dapat mengambil layanan premium (tidak perlu verifikasi)</b>"""
 
-ɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ꜰᴏʀ ɴᴇxᴛ ꜰᴜʟʟ ᴅᴀʏ </b>"""
+    THIRDT_VERIFY_COMPLETE_TEXT= """<b>👋 Hai {},
 
-    VERIFIED_LOG_TEXT = """<b><u>☄ ᴜsᴇʀ ᴠᴇʀɪꜰɪᴇᴅ sᴜᴄᴄᴇssꜰᴜʟʟʏ ☄</u>
+Anda telah menyelesaikan verifikasi ketiga ✓
 
-⚡️ ɴᴀᴍᴇ:- {} [ <code>{}</code> ] 
-📆 ᴅᴀᴛᴇ:- <code>{} </code></b>
+Sekarang Anda memiliki akses tak terbatas untuk hari penuh berikutnya </b>"""
+
+    VERIFIED_LOG_TEXT = """<b><u>☄ Pengguna berhasil diverifikasi ☄</u>
+
+⚡️ Nama:- {} [ <code>{}</code> ] 
+📆 Tanggal:- <code>{}</code></b>
 
 #verified_{}_completed"""
 
-
-    MOVIES_UPDATE_TXT = """<b>#𝑵𝒆𝒘_𝑭𝒊𝒍𝒆_𝑨𝒅𝒅𝒆𝒅 ✅
-**🍿 Title:** {title}
-**🎃 Genres:** {genres}
-**📆 Year:** {year}
-**⭐ Rating:** {rating} / 10
+    MOVIES_UPDATE_TXT = """<b>#File_Baru_Ditambahkan ✅
+**🍿 Judul:** {title}
+**🎃 Genre:** {genres}
+**📆 Tahun:** {year}
+**⭐ Peringkat:** {rating} / 10
 </b>"""
 
-    PREPLANS_TXT = """<b>👋 ʜᴇʏ {},
+    PREPLANS_TXT = """<b>👋 Hai {},
 
-<blockquote>🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇ ʙᴇɴɪꜰɪᴛꜱ:</blockquote>
+<blockquote>🎁 Manfaat fitur premium:</blockquote>
 
-❏ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋꜱ
-❏ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ғɪʟᴇs   
-❏ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ 
-❏ ʜɪɢʜ-sᴘᴇᴇᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ                         
-❏ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs                           
-❏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏᴠɪᴇs ᴀɴᴅ sᴇʀɪᴇs                                                                        
-❏ ꜰᴜʟʟ ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ                              
-❏ ʀᴇǫᴜᴇsᴛ ᴡɪʟʟ ʙᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ɪɴ 𝟷ʜ [ ɪꜰ ᴀᴠᴀɪʟᴀʙʟᴇ ]
+❏ Tidak perlu membuka tautan
+❏ Dapatkan file langsung   
+❏ Pengalaman bebas iklan 
+❏ Tautan unduhan kecepatan tinggi                         
+❏ Tautan streaming multi-pemutar                           
+❏ Film dan serial tak terbatas                                                                    
+❏ Dukungan admin penuh                              
+❏ Permintaan akan selesai dalam 1 jam [ jika tersedia ]
 
-⛽️ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ: /myplan
+⛽️ Periksa paket aktif Anda: /myplan
 </b>"""    
 
-    PREPLANSS_TXT = """<b>👋 ʜᴇʏ {}
-    
-<blockquote>🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇ ʙᴇɴɪꜰɪᴛꜱ:</blockquote>
+    PREPLANSS_TXT = """<b>👋 Hai {},
 
-❏ ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋꜱ
-❏ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ғɪʟᴇs   
-❏ ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ 
-❏ ʜɪɢʜ-sᴘᴇᴇᴅ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ                         
-❏ ᴍᴜʟᴛɪ-ᴘʟᴀʏᴇʀ sᴛʀᴇᴀᴍɪɴɢ ʟɪɴᴋs                           
-❏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴍᴏᴠɪᴇs ᴀɴᴅ sᴇʀɪᴇs                                                                        
-❏ ꜰᴜʟʟ ᴀᴅᴍɪɴ sᴜᴘᴘᴏʀᴛ                              
-❏ ʀᴇǫᴜᴇsᴛ ᴡɪʟʟ ʙᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ɪɴ 𝟷ʜ [ ɪꜰ ᴀᴠᴀɪʟᴀʙʟᴇ ]
+<blockquote>🎁 Manfaat fitur premium:</blockquote>
 
-⛽️ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ: /myplan
+❏ Tidak perlu membuka tautan
+❏ Dapatkan file langsung   
+❏ Pengalaman bebas iklan 
+❏ Tautan unduhan kecepatan tinggi                         
+❏ Tautan streaming multi-pemutar                           
+❏ Film dan serial tak terbatas                                                                    
+❏ Dukungan admin penuh                              
+❏ Permintaan akan selesai dalam 1 jam [ jika tersedia ]
+
+⛽️ Periksa paket aktif Anda: /myplan
 </b>"""
 
-    OTHER_TXT = """<b>👋 ʜᴇʏ {},
-    
-🎁 <u>ᴏᴛʜᴇʀ ᴘʟᴀɴ</u>
-⏰ ᴄᴜꜱᴛᴏᴍɪꜱᴇᴅ ᴅᴀʏꜱ
-💸 ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴅᴀʏꜱ ʏᴏᴜ ᴄʜᴏᴏꜱᴇ
+    OTHER_TXT = """<b>👋 Hai {},
 
-🏆 ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴀ ɴᴇᴡ ᴘʟᴀɴ ᴀᴘᴀʀᴛ ꜰʀᴏᴍ ᴛʜᴇ ɢɪᴠᴇɴ ᴘʟᴀɴ, ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴛᴀʟᴋ ᴛᴏ ᴏᴜʀ <a href='https://t.me/learningbots79'>ᴏᴡɴᴇʀ</a> ᴅɪʀᴇᴄᴛʟʏ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ᴛʜᴇ ᴄᴏɴᴛᴀᴄᴛ ʙᴜᴛᴛᴏɴ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.
-    
-👨‍💻 ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ᴏᴡɴᴇʀ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴏᴛʜᴇʀ ᴘʟᴀɴ.
+🎁 <u>Paket lain</u>
+⏰ Hari yang disesuaikan
+💸 Sesuai dengan hari yang Anda pilih
 
-➛ ᴜꜱᴇ /plan ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴏᴜʀ ᴘʟᴀɴꜱ ᴀᴛ ᴏɴᴄᴇ.
-➛ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ ʙʏ ᴜꜱɪɴɢ : /myplan</b>"""
+🏆 Jika Anda ingin paket baru selain dari paket yang diberikan, maka Anda bisa bicara langsung dengan <a href='https://t.me/learningbots79'>pemilik</a> kami dengan mengklik tombol kontak di bawah ini.
 
-    FREE_TXT = """<b>👋 ʜᴇʏ {}
-    
-<blockquote>🎖️ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʀᴇᴍɪᴜᴍ ᴘʟᴀɴꜱ :</blockquote>
+👨‍💻 Hubungi pemilik untuk mendapatkan paket lainnya.
 
- <code>××××</code> [ᴛᴀᴘ ᴛᴏ ᴄᴏᴘʏ]
+➛ Gunakan /plan untuk melihat semua paket kami sekaligus.
+➛ Periksa paket aktif Anda dengan menggunakan: /myplan</b>"""
+
+    FREE_TXT = """<b>👋 Hai {},
+
+<blockquote>🎖️Paket premium tersedia:</blockquote>
+
+ <code>××××</code> [tap untuk menyalin]
  
-⛽️ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ: /myplan
+⛽️ Periksa paket aktif Anda: /myplan
 
-🏷️ <a href='https://t.me/'>ᴘʀᴇᴍɪᴜᴍ ᴘʀᴏᴏꜰ</a>
+🏷️ <a href='https://t.me/'>Bukti premium</a>
 
-‼️ ᴍᴜsᴛ sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ ᴀғᴛᴇʀ ᴘᴀʏᴍᴇɴᴛ.
-‼️ ɢɪᴠᴇ ᴜꜱ ꜱᴏᴍᴇᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ʏᴏᴜ ɪɴ ᴘʀᴇᴍɪᴜᴍ ʟɪꜱᴛ.
+‼️ Harus kirim tangkapan layar setelah pembayaran.
+‼️ Beri kami waktu untuk menambahkan Anda ke daftar premium.
 </b>"""
 
     ADMIN_CMD_TXT = """<b><blockquote>
--------------User Premium------------
-➩ /add_premium {user ID} {Times} - Add a premium user
-➩ /remove_premium {user ID} - Remove a premium user
-➩ /add_redeem - Generate a redeem code
-➩ /premium_users - List all premium users
-➩ /refresh - Refresh free trial for users
--------------Update Channel----------
-➩ /set_muc {channel ID} - Set the movies update channel
---------------PM Search--------------
-➩ /pm_search_on - Enable PM search
-➩ /pm_search_off - Disable PM search
---------------Verify ID--------------
-➩ /verify_id - Generate a verification ID for group use only
---------------Set Ads----------------
-➩ /set_ads {ads name}}#{Times}#{photo URL} - <a href="https://t.me/Jisshu_developer/11">Explain</a>
-➩ /del_ads - Delete ads
+-------------Pengguna Premium------------
+➩ /add_premium {user ID} {Times} - Tambahkan pengguna premium
+➩ /remove_premium {user ID} - Hapus pengguna premium
+➩ /add_redeem - Buat kode redeem
+➩ /premium_users - Daftar semua pengguna premium
+➩ /refresh - Segarkan uji coba gratis untuk pengguna
+-------------Saluran Pembaruan----------
+➩ /set_muc {ID saluran} - Tetapkan saluran pembaruan film
+--------------Pencarian PM--------------
+➩ /pm_search_on - Aktifkan pencarian PM
+➩ /pm_search_off - Nonaktifkan pencarian PM
+--------------Verifikasi ID--------------
+➩ /verify_id - Buat ID verifikasi hanya untuk penggunaan grup
+--------------Tetapkan Iklan----------------
+➩ /set_ads {nama iklan}}#{Times}#{URL foto} - <a href="https://t.me/Jisshu_developer/11">Penjelasan</a>
+➩ /del_ads - Hapus iklan
 -------------Top Trending------------
-➩ /setlist {Mirzapur, Money Heist} - <a href=https://t.me/Jisshu_developer/10>Explain</a>
-➩ /clearlist - Clear all lists
+➩ /setlist {Mirzapur, Money Heist} - <a href=https://t.me/Jisshu_developer/10>Penjelasan</a>
+➩ /clearlist - Hapus semua daftar
 </blockquote></b>"""
 
     ADMIN_CMD_TXT2 = """<b><blockquote>
---------------Index File--------------
-➩ /index - Index all files
---------------Leave Link--------------
-➩ /leave {group ID} - Leave the specified group
--------------Send Message-------------
-➩ /send {user-name} - Use this command as a reply to any message
-----------------Ban User---------------
-➩ /ban {user-name} - Ban user 
-➩ /unban {user-name} - Unban user
+--------------Indeks File--------------
+➩ /index - Indeks semua file
+--------------Tautan Keluar--------------
+➩ /leave {ID grup} - Keluar dari grup yang ditentukan
+-------------Kirim Pesan-------------
+➩ /send {nama pengguna} - Gunakan perintah ini sebagai balasan untuk pesan apa pun
+----------------Larang Pengguna---------------
+➩ /ban {nama pengguna} - Larang pengguna
+➩ /unban {nama pengguna} - Batalkan larangan pengguna
 --------------Broadcast--------------
-➩ /broadcast - Broadcast a message to all users
-➩ /grp_broadcast - Broadcast a message to all connected groups
+➩ /broadcast - Kirim pesan ke semua pengguna
+➩ /grp_broadcast - Kirim pesan ke semua grup yang terhubung
 
 </blockquote></b>"""
     
     GROUP_TEXT = """<b><blockquote>
- --------------Set Verify-------------
-/set_verify {{website link}} {{website api}}
-/set_verify_2 {{website link}} {{website api}}
-/set_verify_3 {{website link}} {{website api}}
--------------Set Verify Time-----------
-/set_time_2 {{seconds}} Sᴇᴛ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛɪᴍᴇ
-/set_time_3 {{seconds}} Sᴇᴛ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛɪᴍᴇ
---------------Verify On Off------------
-/verifyoff {{verify.off code}} - off verification <a href="https://t.me/IM_JISSHU">Cᴏɴᴛᴀᴄᴛ</a> ᴛʜᴇ ʙᴏᴛ ᴀᴅᴍɪɴ ғᴏʀ ᴀ ᴠᴇʀɪғʏ.ᴏғғ ᴄᴏᴅᴇ
-/verifyon - on verification 
-------------Set File Caption-----------
-/set_caption - set coustom file caption 
------------Set Imdb Template-----------
-/set_template - set IMDb template <a href="https://t.me/Jisshu_developer/8">Example</a>
---------------Set Tutorial-------------
-/set_tutorial - set verification tutorial 
--------------Set Log Channel-----------
---> ᴀᴅᴅ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ʙʏ ᴛʜɪs ꜰᴏʀᴍᴀᴛ & ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ɪs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ 👇
+ --------------Setel Verifikasi-------------
+/set_verify {{tautan situs web}} {{api situs web}}
+/set_verify_2 {{tautan situs web}} {{api situs web}}
+/set_verify_3 {{tautan situs web}} {{api situs web}}
+-------------Setel Waktu Verifikasi-----------
+/set_time_2 {{detik}} Setel waktu verifikasi kedua
+/set_time_3 {{detik}} Setel waktu verifikasi ketiga
+--------------Verifikasi On Off------------
+/verifyoff {{kode verify.off}} - nonaktifkan verifikasi <a href="https://t.me/IM_JISSHU">Hubungi</a> admin bot untuk kode verify.off
+/verifyon - aktifkan verifikasi 
+------------Setel Keterangan File-----------
+/set_caption - setel keterangan file khusus 
+-----------Setel Template Imdb-----------
+/set_template - setel template IMDb <a href="https://t.me/Jisshu_developer/8">Contoh</a>
+--------------Setel Tutorial-------------
+/set_tutorial - setel tutorial verifikasi 
+-------------Setel Saluran Log-----------
+--> Tambahkan saluran log dengan format ini & pastikan bot adalah admin di saluran log Anda 👇
 
 /set_log {{log channel id}}
 ---------------------------------------
-ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀʟʟ ᴅᴇᴛᴀɪʟs 
-ʙʏ /details ᴄᴏᴍᴍᴀɴᴅ
+Anda dapat memeriksa semua detail Anda 
+dengan perintah /details
 </blockquote>
-Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴀɴᴅ ᴜsᴇ ᴀʟʟ ғᴇᴀᴛᴜʀᴇs😇</b>"""
+Tambahkan saya ke grup Anda dan jadikan saya admin dan gunakan semua fitur😇</b>"""
 
-    SOURCE_TXT = """<b>
-NOTE:
-- Create Your Bot ◉› :<blockquote><a href="https://youtu.be/mWCsVUOKuoI?si=7qVkoBfDxMCXt-ms">𝗝𝗶𝘀𝘀𝗵𝘂-𝗙𝗶𝗹𝘁𝗲𝗿-𝗕𝗼𝘁</a></blockquote>
+    SOURCE_TXT = """<b>CATATAN:
+- Buat Bot Anda ◉› :<blockquote><a href="https://youtu.be/mWCsVUOKuoI?si=7qVkoBfDxMCXt-ms">𝗝𝗶𝘀𝘀𝗵𝘂-𝗙𝗶𝗹𝘁𝗲𝗿-𝗕𝗼𝘁</a></blockquote>
 
-developer : Mr.Jisshu
+pengembang: Mr.Jisshu
 </b>""" 
     GROUP_C_TEXT = """<b><blockquote>
- --------------Set Verify-------------
-/set_verify {website link} {website api}
-/set_verify_2 {website link} {website api}
-/set_verify_3 {website link} {website api}
--------------Set Verify Time-----------
-/set_time_2 {seconds} Sᴇᴛ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛɪᴍᴇ
-/set_time_3 {seconds} Sᴇᴛ ᴛʜᴇ ᴛʜɪʀᴅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛɪᴍᴇ
---------------Verify On Off------------
-/verifyoff {verify.off code} - off verification <a href="https://t.me/IM_JISSHU">Cᴏɴᴛᴀᴄᴛ</a> ᴛʜᴇ ʙᴏᴛ ᴀᴅᴍɪɴ ғᴏʀ ᴀ ᴠᴇʀɪғʏ.ᴏғғ ᴄᴏᴅᴇ
-/verifyon - on verification 
-------------Set File Caption-----------
-/set_caption - set coustom file caption 
------------Set Imdb Template-----------
-/set_template - set IMDb template <a href="https://t.me/Jisshu_developer/8">Example</a>
---------------Set Tutorial-------------
-/set_tutorial - set verification tutorial 
--------------Set Log Channel-----------
---> ᴀᴅᴅ ʟᴏɢ ᴄʜᴀɴɴᴇʟ ʙʏ ᴛʜɪs ꜰᴏʀᴍᴀᴛ & ᴍᴀᴋᴇ sᴜʀᴇ ʙᴏᴛ ɪs ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ 👇
+ --------------Setel Verifikasi-------------
+/set_verify {tautan situs web} {api situs web}
+/set_verify_2 {tautan situs web} {api situs web}
+/set_verify_3 {tautan situs web} {api situs web}
+-------------Setel Waktu Verifikasi-----------
+/set_time_2 {detik} Setel waktu verifikasi kedua
+/set_time_3 {detik} Setel waktu verifikasi ketiga
+--------------Verifikasi On Off------------
+/verifyoff {kode verify.off} - nonaktifkan verifikasi <a href="https://t.me/IM_JISSHU">Hubungi</a> admin bot untuk kode verify.off
+/verifyon - aktifkan verifikasi 
+------------Setel Keterangan File-----------
+/set_caption - setel keterangan file khusus 
+-----------Setel Template Imdb-----------
+/set_template - setel template IMDb <a href="https://t.me/Jisshu_developer/8">Contoh</a>
+--------------Setel Tutorial-------------
+/set_tutorial - setel tutorial verifikasi 
+-------------Setel Saluran Log-----------
+--> Tambahkan saluran log dengan format ini & pastikan bot adalah admin di saluran log Anda 👇
 
-/set_log {log channel id}
+/set_log {ID saluran log}
 ---------------------------------------
-ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀʟʟ ᴅᴇᴛᴀɪʟs 
-ʙʏ /details ᴄᴏᴍᴍᴀɴᴅ
+Anda dapat memeriksa semua detail Anda 
+dengan perintah /details
 </blockquote>
-Iғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ᴅᴏᴜʙᴛs ᴘʟᴇᴀsᴇ <a href="https://t.me/IM_JISSHU">ᴄᴏɴᴛᴀᴄᴛ</a> ᴍʏ <a href="https://t.me/IM_JISSHU">ᴀᴅᴍɪɴ</a></b>"""
+Jika Anda memiliki keraguan silakan <a href="https://t.me/IM_JISSHU">hubungi</a> <a href="https://t.me/IM_JISSHU">admin</a> saya</b>"""
