@@ -1,8 +1,8 @@
 import os
 class script(object):
-    START_TXT = """<b>ʜᴇʏ {}, {}\n\nɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ʙᴏᴛ. ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪ ᴡɪʟʟ ɢɪᴠᴇ ᴍᴏᴠɪᴇs ᴏʀ sᴇʀɪᴇs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴘᴍ !! 😍\n<blockquote>🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/JISSHU_BOTS">Jɪssʜᴜ Bᴏᴛs</a></blockquote></b>"""
+    START_TXT = """<b>ʜᴇʏ {}, {}\n\nɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ʙᴏᴛ. ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪ ᴡɪʟʟ ɢɪᴠᴇ ᴍᴏᴠɪᴇs ᴏʀ sᴇʀɪᴇs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴘᴍ !! 😍\n<blockquote>🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/TMID21">TelMovID</a></blockquote></b>"""
     
-    HELP_TXT = """<b>Klik tombol di bawah ini untuk mendapatkan dokumentasi tentang modul tertentu..\n\n<blockquote>🌿 <a href="https://youtu.be/mWCsVUOKuoI?si=7qVkoBfDxMCXt-ms">👉🏻 Buat Bot Anda Sendiri</a></blockquote></b>"""
+    HELP_TXT = """<b>Klik tombol di bawah ini untuk mendapatkan dokumentasi tentang modul tertentu..\n\n<blockquote>🌿 <a href="https://t.me/+6ox6Xi-uqCo3NzFl">👉🏻 Buat Bot Anda Sendiri</a></blockquote></b>"""
     
     TELE_TXT = """<b>/telegraph - kirim saya gambar atau video di bawah (5MB)
 
@@ -34,16 +34,16 @@ Setelah itu, coba akses film tersebut lalu klik tombol "Coba Lagi".
 
 Semua file dalam bot ini tersedia secara bebas di internet atau diposting oleh orang lain. Untuk pencarian yang mudah, bot ini mengindeks file yang sudah diunggah di Telegram. Kami menghormati semua undang-undang hak cipta dan bekerja sesuai dengan DMCA dan EUCD. Jika ada yang melanggar hukum, silakan hubungi saya agar dapat segera dihapus. Dilarang mengunduh, streaming, mereproduksi, berbagi, atau mengonsumsi konten tanpa izin eksplisit dari pembuat konten atau pemegang hak cipta yang sah. Jika Anda yakin bot ini melanggar hak kekayaan intelektual Anda, hubungi saluran terkait untuk penghapusan. Bot ini tidak memiliki konten ini, hanya mengindeks file dari Telegram.
 
-<blockquote>🌿 Dipelihara oleh: <a href='https://t.me/learningbots79'>Yash</a></b></blockquote>"""
+<blockquote>🌿 Dipelihara oleh: <a href='https://t.me/+6ox6Xi-uqCo3NzFl'>TelMovID</a></b></blockquote>"""
     
 
-    ABOUT_TEXT = """<blockquote><b>‣ Nama saya: Learning Bots\n‣ Pembuat: <a href='https://t.me/learningbots79'>MR.Innocent Babe Dead</a>\n‣ Perpustakaan: pyrogram\n‣ Bahasa: Python\n‣ Basis Data: Mongo DB\n‣ Dihosting di: semua web\n‣ Status build: v5.2 [stabil]</b></blockquote>"""    
+    ABOUT_TEXT = """<blockquote><b>‣ Nama saya: Cari Film\n‣ Pembuat: <a href='https://t.me/TMID21'>TelMovID</a>\n‣ Perpustakaan: pyrogram\n‣ Bahasa: Python\n‣ Basis Data: Mongo DB\n‣ Dihosting di: semua web\n‣ Status build: v5.2 [stabil]</b></blockquote>"""    
     
     SUPPORT_GRP_MOVIE_TEXT = '''<b>Hai {}
 
 Saya menemukan {} hasil 🎁,
-tapi tidak bisa mengirim di sini 🤞🏻
-Silakan bergabung dengan grup permintaan kami untuk mendapatkannya ✨</b>'''
+tapi tidak bisa mengirim file nya 🤞🏻
+Anda belum bergabung grup Support Chat ✨</b>'''
 
     CHANNELS = """<u>Semua grup dan saluran kami</u> 
 
@@ -58,10 +58,10 @@ Silakan bergabung dengan grup permintaan kami untuk mendapatkannya ✨</b>'''
 
 📅 Tanggal: <code>{}</code>
 ⏰ Waktu: <code>{}</code>
-🌐 Zona Waktu: <code>Asia/Kolkata</code>
+🌐 Zona Waktu: <code>Asia/Jakarta</code>
 🛠️ Status Build: <code>v4.2 [Stabil]</code>
 
-Oleh @JISSHU_BOTS</b>"""
+Oleh TelMovID</b>"""
         
     
     STATUS_TXT = """<b><u>🗃 Basis Data 1 🗃</u>
@@ -108,7 +108,7 @@ Pengguna - {}"""
 ⭐ Peringkat: {rating} / 10</b>
 """
 
-    FILE_CAPTION = """<b>{file_name}\n\nBergabung ➥ 「<a href="https://t.me/Jisshu_Originals">Jisshu Originals</a>」</b>"""
+    FILE_CAPTION = """<b>{file_name}\n\nBergabung ➥ 「<a href="https://t.me/+6ox6Xi-uqCo3NzFl">Support Chat</a>」</b>"""
     
 
     ALRT_TXT = """Segera keluar dari sini!"""
@@ -135,9 +135,9 @@ Saya tidak menemukan apa pun terkait itu, apakah Anda maksud salah satu dari ini
     
     PLAN_TEXT = """<b>Kami menyediakan premium dengan harga terendah:
     
-1 rupiah per hari 👻
-29 rupiah untuk satu bulan 😚
-55 rupiah untuk dua bulan 😗
+3.000 rupiah per hari 👻
+5.000 rupiah untuk satu bulan 😚
+7.000 rupiah untuk dua bulan 😗
 
 Klik tombol di bawah ini untuk melanjutkan pembelian ↡↡↡
 </b>"""
@@ -240,9 +240,9 @@ Sekarang Anda memiliki akses tak terbatas untuk hari penuh berikutnya </b>"""
 ⏰ Hari yang disesuaikan
 💸 Sesuai dengan hari yang Anda pilih
 
-🏆 Jika Anda ingin paket baru selain dari paket yang diberikan, maka Anda bisa bicara langsung dengan <a href='https://t.me/learningbots79'>pemilik</a> kami dengan mengklik tombol kontak di bawah ini.
+🏆 Jika Anda ingin paket baru selain dari paket yang diberikan, maka Anda bisa bicara langsung dengan <a href='https://t.me/+6ox6Xi-uqCo3NzFl'>Admin</a> kami dengan mengklik tombol kontak di bawah ini.
 
-👨‍💻 Hubungi pemilik untuk mendapatkan paket lainnya.
+👨‍💻 Hubungi admin untuk mendapatkan paket lainnya.
 
 ➛ Gunakan /plan untuk melihat semua paket kami sekaligus.
 ➛ Periksa paket aktif Anda dengan menggunakan: /myplan</b>"""
@@ -276,10 +276,10 @@ Sekarang Anda memiliki akses tak terbatas untuk hari penuh berikutnya </b>"""
 --------------Verifikasi ID--------------
 ➩ /verify_id - Buat ID verifikasi hanya untuk penggunaan grup
 --------------Tetapkan Iklan----------------
-➩ /set_ads {nama iklan}}#{Times}#{URL foto} - <a href="https://t.me/Jisshu_developer/11">Penjelasan</a>
+➩ /set_ads {nama iklan}}#{Times}#{URL foto} - <a href="https://t.me/+6ox6Xi-uqCo3NzFl">Penjelasan</a>
 ➩ /del_ads - Hapus iklan
 -------------Top Trending------------
-➩ /setlist {Mirzapur, Money Heist} - <a href=https://t.me/Jisshu_developer/10>Penjelasan</a>
+➩ /setlist {Mirzapur, Money Heist} - <a href=https://t.me/+6ox6Xi-uqCo3NzFl>Penjelasan</a>
 ➩ /clearlist - Hapus semua daftar
 </blockquote></b>"""
 
@@ -313,7 +313,7 @@ Sekarang Anda memiliki akses tak terbatas untuk hari penuh berikutnya </b>"""
 ------------Setel Keterangan File-----------
 /set_caption - setel keterangan file khusus 
 -----------Setel Template Imdb-----------
-/set_template - setel template IMDb <a href="https://t.me/Jisshu_developer/8">Contoh</a>
+/set_template - setel template IMDb <a href="https://t.me/TMID21">Contoh</a>
 --------------Setel Tutorial-------------
 /set_tutorial - setel tutorial verifikasi 
 -------------Setel Saluran Log-----------
@@ -327,7 +327,7 @@ dengan perintah /details
 Tambahkan saya ke grup Anda dan jadikan saya admin dan gunakan semua fitur😇</b>"""
 
     SOURCE_TXT = """<b>CATATAN:
-- Buat Bot Anda ◉› :<blockquote><a href="https://youtu.be/mWCsVUOKuoI?si=7qVkoBfDxMCXt-ms">𝗝𝗶𝘀𝘀𝗵𝘂-𝗙𝗶𝗹𝘁𝗲𝗿-𝗕𝗼𝘁</a></blockquote>
+- Oleh ◉› :<blockquote><a href="https://t.me/TMID21">TelMovID</a></blockquote>
 
 pengembang: Mr.Jisshu
 </b>""" 
@@ -340,12 +340,12 @@ pengembang: Mr.Jisshu
 /set_time_2 {detik} Setel waktu verifikasi kedua
 /set_time_3 {detik} Setel waktu verifikasi ketiga
 --------------Verifikasi On Off------------
-/verifyoff {kode verify.off} - nonaktifkan verifikasi <a href="https://t.me/IM_JISSHU">Hubungi</a> admin bot untuk kode verify.off
+/verifyoff {kode verify.off} - nonaktifkan verifikasi <a href="https://t.me/+6ox6Xi-uqCo3NzFl">hubungi</a> admin bot untuk kode verify.off
 /verifyon - aktifkan verifikasi 
 ------------Setel Keterangan File-----------
 /set_caption - setel keterangan file khusus 
 -----------Setel Template Imdb-----------
-/set_template - setel template IMDb <a href="https://t.me/Jisshu_developer/8">Contoh</a>
+/set_template - setel template IMDb <a href="https://t.me/TMID21">Contoh</a>
 --------------Setel Tutorial-------------
 /set_tutorial - setel tutorial verifikasi 
 -------------Setel Saluran Log-----------
@@ -356,4 +356,4 @@ pengembang: Mr.Jisshu
 Anda dapat memeriksa semua detail Anda 
 dengan perintah /details
 </blockquote>
-Jika Anda memiliki keraguan silakan <a href="https://t.me/IM_JISSHU">hubungi</a> <a href="https://t.me/IM_JISSHU">admin</a> saya</b>"""
+Jika Anda memiliki keraguan silakan <a href="https://t.me/+6ox6Xi-uqCo3NzFl">hubungi</a> <a href="https://t.me/+6ox6Xi-uqCo3NzFl">admin</a> saya</b>"""
